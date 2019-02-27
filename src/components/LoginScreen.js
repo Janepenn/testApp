@@ -1,16 +1,37 @@
 import React from "react";
 import styled from "styled-components";
-import { NavBar, NavIcon, HeadText } from "../common/index";
-import { Text, Image, StyleSheet } from "react-native";
+import {
+  NavBar,
+  NavIcon,
+  HeadText,
+  placeholderColor,
+  underlineColor,
+  LinearColor,
+  Gradient
+} from "../common/index";
+import { Text, Image, StyleSheet, TextInput } from "react-native";
 
 const styles = StyleSheet.create({
   headText: {
     marginLeft: 10,
     textAlignVertical: "bottom"
+  },
+  button: {
+    height: 50
+  },
+  text: {
+    color: "white"
+  },
+  input: {
+    marginTop: 10
+  },
+  gradient: {
+    borderRadius: 5
   }
 });
 
 const LoginContainer = styled.View`
+  flex: 1;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -35,6 +56,17 @@ const TopContainer = styled.View`
 const BottomContainer = styled.View`
   flex: 1;
   justify-content: space-between;
+  width: 100%;
+`;
+
+const InputContainer = styled.View`
+  justify-content: space-around;
+  width: 100%;
+`;
+
+const LoginButton = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
   width: 100%;
 `;
 
@@ -65,7 +97,32 @@ class LoginScreen extends React.Component {
               <HeadText style={styles.headText}>Materity</HeadText>
             </Header>
           </TopContainer>
-          <BottomContainer />
+          <BottomContainer>
+            <InputContainer>
+              <TextInput
+                placeholder="Email"
+                placeholderTextColor={placeholderColor}
+                underlineColorAndroid={underlineColor}
+              />
+              <TextInput
+                style={styles.input}
+                placeholder="Password"
+                placeholderTextColor={placeholderColor}
+                underlineColorAndroid={underlineColor}
+                secureTextEntry={true}
+              />
+            </InputContainer>
+            <LoginButton style={styles.button}>
+              <Gradient
+                colors={LinearColor}
+                angle={90}
+                useAngle={true}
+                style={styles.gradient}
+              >
+                <Text style={styles.text}>SIGN IN</Text>
+              </Gradient>
+            </LoginButton>
+          </BottomContainer>
         </MainContainer>
       </LoginContainer>
     );
