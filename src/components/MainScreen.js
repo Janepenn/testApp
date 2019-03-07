@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Text, Image } from "react-native";
+import { Text, Image, StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  title: {
+    width: "90%"
+  }
+});
 
 const MainContainer = styled.View`
   justify-content: flex-end;
@@ -43,22 +49,22 @@ const MenuContainer = styled.View`
 `;
 
 const menus = [
-  { title: "Pediatra", image: require("../images/pediatra.png") },
-  { title: "Elderly", image: require("../images/elderly.png") },
+  { title: "Pediatra", image: require("../images/child.png") },
   { title: "Maternity", image: require("../images/maternity.png") },
+  { title: "Elderly", image: require("../images/elderly.png") },
+  { title: "Cardiac Problem", image: require("../images/cardiac.png") },
   {
     title: "Early Detection Cancer",
     image: require("../images/detection.png")
   },
-  { title: "Cardiac Problem", image: require("../images/cardiac.png") },
-  { title: "Remote Health", image: require("../images/remote.png") }
+  { title: "Primary Healthcare", image: require("../images/primary.png") }
 ];
 
 const Tab = ({ menu }) => {
   return (
     <TabContainer>
       <Image source={menu.image} />
-      <Text>{menu.title}</Text>
+      <Text style={styles.title}>{menu.title}</Text>
     </TabContainer>
   );
 };

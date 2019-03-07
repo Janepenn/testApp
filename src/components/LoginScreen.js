@@ -91,10 +91,10 @@ class LoginScreen extends React.Component {
         </NavBar>
         <MainContainer>
           <TopContainer>
-            <Logo source={require("../images/IndoRHcare.png")} />
+            {/*<Logo source={require("../images/IndoRHcare.png")} />*/}
             <Header>
               <Image source={require("../images/maternity.png")} />
-              <HeadText style={styles.headText}>Materity</HeadText>
+              <HeadText style={styles.headText}>Maternity</HeadText>
             </Header>
           </TopContainer>
           <BottomContainer>

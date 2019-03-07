@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import LinearGradient from "react-native-linear-gradient";
 
-export const placeholderColor = "#8F9093";
+export const placeholderColor = "#83868E";
 
-export const underlineColor = "#787CFD";
+export const underlineColor = "#2AA1D1";
 
-export const LinearColor = [underlineColor, "#5E8FFD"];
+export const LinearColor = [underlineColor, "#1186B6"];
 
 export const NavIcon = styled.Image`
   width: 14px;
@@ -19,8 +19,8 @@ export const NavBar = styled.View`
 `;
 
 export const HeadText = styled.Text`
-  color: #7480fd;
-  font-size: 27px;
+  color: #2aa1d1;
+  font-size: 30px;
 `;
 
 export const Gradient = styled(LinearGradient)`
